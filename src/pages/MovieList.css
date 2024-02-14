@@ -1,0 +1,37 @@
+.movie-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  
+  .movie-item {
+    width: 200px;
+    margin: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .movie-poster img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .movie-info {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .movie-info h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .movie-info p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #666;
+  }
+  
