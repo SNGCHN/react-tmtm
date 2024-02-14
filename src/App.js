@@ -9,7 +9,7 @@ function App() {
   return (
     <Router>
       <Navbar />
-      <Routes> {/* 'Switch' 대신 'Routes' 사용 */}
+      <Routes> 
         <Route path="/" element={<MovieList />} />
         <Route path="/tv" element={<TvList />} />
         <Route path="/chart" element={<Chart />} />
