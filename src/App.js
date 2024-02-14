@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom"; // 'Switch' 대신 'Routes' 사용
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import MovieList from "./pages/MovieList"
 import TvList from "./pages/TvList";
