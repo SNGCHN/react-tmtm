@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import './MovieList.css';
+import MovieListItem from "../../components/movie/MovieListItem";
 
 const MovieList = () => {
   const [movies, setMovies] = useState([]);
@@ -29,15 +30,7 @@ const MovieList = () => {
   return (
     <div className="movie-list">
       {movies.map((movie) => (
-        <div className="movie-item" key={movie.id}>
-          <div className="movie-poster">
-            <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={movie.title} />
-          </div>
-          <div className="movie-info">
-            <h3>{movie.title}</h3>
-            <p>{movie.release_date}</p>
-          </div>
-        </div>
+        <MovieListItem/>
       ))}
     </div>
   );
