@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Navbar from "./components/navbar/Navbar";
+import Navbar from "./components/layout/navbar/Navbar";
 import MovieList from "./pages/moviepage/MovieList";
 import TvList from "./pages/tvpage/TvList";
 import Chart from "./pages/chartpage/ChartPage";

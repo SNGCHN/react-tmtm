@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import './MovieList.css';
-import MovieListItem from "../../components/movie/MovieListItem";
+import MovieListItem from "../../components/movie/MovieListItem.jsx`";
 
 const MovieList = () => {
   const [movies, setMovies] = useState([]);
