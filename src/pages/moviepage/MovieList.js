@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import './MovieList.css';
-import MovieListItem from "../../components/movie/MovieListItem.jsx`";
+import MovieListItem from "../../components/movie/MovieListItem.jsx";
 
 const MovieList = () => {
   const [movies, setMovies] = useState([]);
@@ -11,7 +11,7 @@ const MovieList = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_TMDB_API_KEY}`
+          `https://api.themoviedb.org/3/movie/popular?language=ko-KR&api_key=${process.env.REACT_APP_TMDB_API_KEY}`
         );
         setMovies(response.data.results);
       } catch (err) {
@@ -30,7 +30,7 @@ const MovieList = () => {
   return (
     <div className="movie-list">
       {movies.map((movie) => (
-        <MovieListItem/>
+        <MovieListItem key={movie.id} movie={movie} />
       ))}
     </div>
   );

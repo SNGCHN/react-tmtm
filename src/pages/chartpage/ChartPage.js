@@ -12,8 +12,8 @@ const Chart = () => {
       try {
         setLoading(true);
         const [movieResponse, tvShowResponse] = await Promise.all([
-          axios.get(`https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_TMDB_API_KEY}`),
-          axios.get(`https://api.themoviedb.org/3/tv/popular?api_key=${process.env.REACT_APP_TMDB_API_KEY}`)
+          axios.get(`https://api.themoviedb.org/3/movie/popular?language=ko-KR&api_key=${process.env.REACT_APP_TMDB_API_KEY}`),
+          axios.get(`https://api.themoviedb.org/3/tv/popular?language=ko-KR&api_key=${process.env.REACT_APP_TMDB_API_KEY}`)
         ]);
         setMovies(movieResponse.data.results);
         setTvShows(tvShowResponse.data.results);

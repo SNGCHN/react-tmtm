@@ -12,7 +12,7 @@ const TvList = () => {
       setLoading(true);
       try {
         const response = await axios.get(
-          `https://api.themoviedb.org/3/tv/popular?api_key=${process.env.REACT_APP_TMDB_API_KEY}`
+          `https://api.themoviedb.org/3/tv/popular?language=ko-KR&api_key=${process.env.REACT_APP_TMDB_API_KEY}`
         );
         setTvShows(response.data.results);
       } catch (err) {
